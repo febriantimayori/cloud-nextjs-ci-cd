@@ -32,7 +32,7 @@ jobs:
         run: |
           mkdir -p site
           cp -r .next/standalone/* site/
-          cp -r .next/static site/.next/static
+          cp -r .next/static site/.next/
           cp -r public site/public || true
 
       - name: Azure Login
