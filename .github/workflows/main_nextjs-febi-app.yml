@@ -27,8 +27,13 @@ jobs:
 
       - name: Build Next.js app
         run: npm run build
-             npm install --omit=dev
-             zip -r build.zip .next public node_modules package.json next.config.js
+
+      - name: Prepare deployment package
+        run: |
+          mkdir deploy_package
+          cp -r .next public package.json node_modules deploy_package/
+          cd deploy_package
+          zip -r ../deploy.zip *
 
       - name: Azure Login
         uses: azure/login@v2
@@ -40,4 +45,4 @@ jobs:
         with:
           app-name: 'nextjs-febi-app'
           slot-name: 'Production'
-          package: build.zip
+          package: deploy.zip
