@@ -31,7 +31,7 @@ jobs:
       - name: Prepare deployment package
         run: |
           mkdir -p site
-          cp -r .next/standalone/* site/
+          cp -r .next/standalone/. site/
           cp -r .next/static site/.next/
           cp -r public site/public || true
 

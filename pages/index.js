@@ -12,6 +12,7 @@ export default function Home() {
 
   useEffect(() => {
     setShow(true);
+    console.log("🔥 CI/CD version 2");
   }, []);
 
   return (
