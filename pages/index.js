@@ -61,6 +61,17 @@ export default function Home() {
         >
           Praktikum Cloud Computing Week 12: Aplikasi Next.js ini sudah terdeploy otomatis ke Azure App Service menggunakan GitHub Actions.
         </p>
+        <p
+          style={{
+            marginTop: '30px',
+            fontWeight: 500,
+            fontSize: '1rem',
+            opacity: show ? 1 : 0,
+            transition: 'opacity 0.6s ease 0.6s',
+          }}
+        >
+          Dibuat oleh: <strong>Febrianti Mayori</strong>
+        </p>
       </main>
     </>
   );
